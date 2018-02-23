@@ -68,5 +68,44 @@ namespace Pokedex.Controllers
             return View(model);
         }
 
+        [HttpPost]
+        public IActionResult Index([Bind("SearchString")] SearchViewModel model)
+        {
+            var result = _client.Search<Pokemon>(s => s
+                .Query(q => q
+                    .Bool(b => b
+                        .Must(mu => mu
+                            .MultiMatch(mp => mp
+                                .Query(model.SearchString)
+                                .Fields(f => f
+                                    .Field(f1 => f1.Name, 3)
+                                    .Field(f2 => f2.Num, 1.5)
+                                    .Field(f3 => f3.Type, 2)
+                                    .Field(f4 => f4.Weaknesses, 0.2)
+                                )
+                            )
+                        )
+                    )
+                )
+                .Size(20)
+            );
+
+            model.Pokemons = result.Documents;
+            model.AmountOfHits = (int)result.Total;
+
+            return View(model);
+        }
+
+        public async Task<IActionResult> List()
+        {
+            var result = await _client.SearchAsync<Pokemon>(s => s
+                .Query(q => q.MatchAll())
+                .Size(200)
+                );
+
+            IEnumerable<Pokemon> listOfPokemon = result.Documents;
+
+            return View(listOfPokemon);
+        }
     }
 }

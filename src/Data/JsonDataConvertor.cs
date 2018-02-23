@@ -1,10 +1,10 @@
-﻿using ElasticSearchWebAppTest.Models;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Pokedex.Models;
 
 namespace Pokedex.Data
 {
