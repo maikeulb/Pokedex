@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Pokedex.Models;
 
-namespace Pokdex.ViewModels
+namespace Pokedex.ViewModels
 {
     public class SearchViewModel
     {
