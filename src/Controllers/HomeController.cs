@@ -52,6 +52,7 @@ namespace Pokedex.Controllers
                         Id = pokemonRoot.id,
                         Name = pokemonRoot.name,
                         Type = pokemonRoot.type,
+                        Img = pokemonRoot.img,
                         Weaknesses = pokemonRoot.weaknesses,
                     };
 

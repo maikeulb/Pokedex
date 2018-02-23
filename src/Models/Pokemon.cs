@@ -10,7 +10,7 @@ namespace Pokedex.Models
     {
         public int Id { get; set; }
         public string Num { get; set; }
-        public string ImgUrl { get; set; }
+        public string Img { get; set; }
         public string Name { get; set; }
         [Keyword]
         public IEnumerable<string> Type { get; set; }

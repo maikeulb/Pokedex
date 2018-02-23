@@ -1,42 +1,50 @@
 @model Pokedex.Models.Pokemon
-
 @{
-    ViewData["Title"] = "ListPokemonPage";
+    ViewData["Title"] = "Pokemon Results";
 }
 
 <hr />
-<dl class="dl-horizontal">
-    <dt>
+
+<table>
+  <thead>
+    <tr>
+      <th>
         @Html.DisplayNameFor(model => model.Id)
-    </dt>
-    <dd>
-        @Html.DisplayFor(model => model.Id)
-    </dd>
-    <dt>
+      </th>
+      <th>
+        @Html.DisplayNameFor(model => model.Img)
+      </th>
+      <th>
         @Html.DisplayNameFor(model => model.Name)
-    </dt>
-    <dd>
-        @Html.DisplayFor(model => model.Name)
-    </dd>
-    <dt>
+      </th>
+      <th>
         @Html.DisplayNameFor(model => model.Type)
-    </dt>
-    <dd>
-        @Html.DisplayFor(model => model.Type)
-    </dd>
-    <dt>
+      </th>
+      <th>
         @Html.DisplayNameFor(model => model.Weaknesses)
-    </dt>
-    <dd>
+      </th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+
+  <tbody>
+    <tr>
+      <td>
+        @Html.DisplayFor(model => model.Id)
+      </td>
+      <td>
+        <img src="@Model.Img">
+      </td>
+      <td>
+        @Html.DisplayFor(model => model.Name)
+      </td>
+      <td>
+        @Html.DisplayFor(model => model.Type)
+      </td>
+      <td>
         @Html.DisplayFor(model => model.Weaknesses)
-    </dd>
-    <dd>
-        @if (Model.Weaknesses.Count() > 0)
-        {
-            @foreach (var tag in Model.Weaknesses)
-            {
-                <div>@tag</div>
-            }
-        }
-    </dd>
-</dl>
+      </td>
+    </tr>
+  </tbody>
+</table>
