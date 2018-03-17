@@ -12,7 +12,7 @@ namespace Pokedex.Data
     {
         public List<Pokemon.RootObject> JsonToPokemonList()
         {
-            string dataPath = @"Data/pokedex.json";
+            string dataPath = @"Data/pokedex_cleansed.json";
             string json = File.ReadAllText(dataPath);
             var listWithPokemonRoots = JsonConvert.DeserializeObject<List<Pokemon.RootObject>>(json);
 

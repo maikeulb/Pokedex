@@ -3039,7 +3039,7 @@
 		"Grass"
 	],
 	"next_evolution": [
-		"name": "Seadra"
+		"Seadra"
 	]
 }, {
 	"id": 117,
@@ -3062,7 +3062,7 @@
 		"Grass"
 	],
 	"prev_evolution": [
-		"name": "Horsea"
+		"Horsea"
 	]
 }, {
 	"id": 118,

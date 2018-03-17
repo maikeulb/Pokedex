@@ -14,12 +14,14 @@ namespace Pokedex.Models
         public string Name { get; set; }
         [Keyword]
         public IEnumerable<string> Type { get; set; }
-        public IEnumerable<string> Weaknesses { get; set; }
+        public IEnumerable<string> PrevEvolution { get; set; }
+        public IEnumerable<string> NextEvolution { get; set; }
 
         public Pokemon()
         {
             Type = new List<string>();
-            Weaknesses = new List<string>();
+            NextEvolution = new List<string>();
+            PrevEvolution = new List<string>();
         }
 
         public class RootObject
@@ -29,7 +31,8 @@ namespace Pokedex.Models
             public string img { get; set; }
             public string name { get; set; }
             public List<string> type { get; set; }
-            public List<string> weaknesses { get; set; }
+            public List<string> prev_evolution { get; set; }
+            public List<string> next_evolution { get; set; }
         }
     }
 }

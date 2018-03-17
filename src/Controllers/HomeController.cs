@@ -24,13 +24,13 @@ namespace Pokedex.Controllers
         {
             _node = new Uri("http://localhost:9200");
             _settings = new ConnectionSettings(_node);
-            _settings.DefaultIndex("pokemon");
+            _settings.DefaultIndex("pokemon_cleansed");
             _client = new ElasticClient(_settings);
         }
 
         public IActionResult Index()
         {
-            if (_client.IndexExists("pokemon").Exists == false)
+            if (_client.IndexExists("pokemon_cleansed").Exists == false)
             {
 
                 var indexDescriptor = new CreateIndexDescriptor("pokemon")
@@ -53,7 +53,8 @@ namespace Pokedex.Controllers
                         Name = pokemonRoot.name,
                         Type = pokemonRoot.type,
                         Img = pokemonRoot.img,
-                        Weaknesses = pokemonRoot.weaknesses,
+                        PrevEvolution = pokemonRoot.prev_evolution,
+                        NextEvolution = pokemonRoot.next_evolution,
                     };
 
                     var result = _client.Bulk(b => b
@@ -80,9 +81,9 @@ namespace Pokedex.Controllers
                                 .Query(model.SearchString)
                                 .Fields(f => f
                                     .Field(f1 => f1.Name, 3)
-                                    .Field(f2 => f2.Num, 1.5)
-                                    .Field(f3 => f3.Type, 2)
-                                    .Field(f4 => f4.Weaknesses, 0.2)
+                                    .Field(f2 => f2.Type, 2)
+                                    .Field(f3 => f3.PrevEvolution, 1)
+                                    .Field(f4 => f4.NextEvolution, 1)
                                 )
                             )
                         )

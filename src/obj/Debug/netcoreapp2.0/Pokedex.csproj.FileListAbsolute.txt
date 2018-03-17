@@ -18,3 +18,13 @@
 /home/michael/Projects-DotNet/MrRobotES/src/obj/Debug/netcoreapp2.0/Pokedex.AssemblyInfo.cs
 /home/michael/Projects-DotNet/MrRobotES/src/obj/Debug/netcoreapp2.0/Pokedex.dll
 /home/michael/Projects-DotNet/MrRobotES/src/obj/Debug/netcoreapp2.0/Pokedex.pdb
+/home/michael/Projects-DotNet/PokedexES/src/bin/Debug/netcoreapp2.0/Pokedex.deps.json
+/home/michael/Projects-DotNet/PokedexES/src/bin/Debug/netcoreapp2.0/Pokedex.runtimeconfig.json
+/home/michael/Projects-DotNet/PokedexES/src/bin/Debug/netcoreapp2.0/Pokedex.runtimeconfig.dev.json
+/home/michael/Projects-DotNet/PokedexES/src/bin/Debug/netcoreapp2.0/Pokedex.dll
+/home/michael/Projects-DotNet/PokedexES/src/bin/Debug/netcoreapp2.0/Pokedex.pdb
+/home/michael/Projects-DotNet/PokedexES/src/obj/Debug/netcoreapp2.0/Pokedex.csproj.CoreCompileInputs.cache
+/home/michael/Projects-DotNet/PokedexES/src/obj/Debug/netcoreapp2.0/Pokedex.AssemblyInfoInputs.cache
+/home/michael/Projects-DotNet/PokedexES/src/obj/Debug/netcoreapp2.0/Pokedex.AssemblyInfo.cs
+/home/michael/Projects-DotNet/PokedexES/src/obj/Debug/netcoreapp2.0/Pokedex.dll
+/home/michael/Projects-DotNet/PokedexES/src/obj/Debug/netcoreapp2.0/Pokedex.pdb

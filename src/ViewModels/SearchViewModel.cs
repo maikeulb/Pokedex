@@ -12,15 +12,15 @@ namespace Pokedex.ViewModels
         public string SearchString { get; set; }
         public IEnumerable<Pokemon> Pokemons { get; set; }
         public int AmountOfHits { get; set; }
-        public string SelectedWeakness { get; set; }
-        public IEnumerable<string> SelectedWeaknesses { get; set; }
-        public IEnumerable<SelectListItem> AvailableWeaknesses { get; set; }
+        public string Selectedtype { get; set; }
+        public IEnumerable<string> SelectedType { get; set; }
+        public IEnumerable<SelectListItem> AvailableTypes { get; set; }
 
         public SearchViewModel()
         {
             Pokemons = new List<Pokemon>();
-            SelectedWeaknesses = new List<string>();
-            AvailableWeaknesses = new List<SelectListItem>();
+            SelectedType = new List<string>();
+            AvailableTypes = new List<SelectListItem>();
         }
     }
 }
