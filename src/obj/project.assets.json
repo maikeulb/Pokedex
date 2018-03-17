@@ -12587,11 +12587,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/michael/Projects-DotNet/Pokedex/src/Pokedex.csproj",
+      "projectUniqueName": "/home/michael/Projects-DotNet/MrRobotES/src/Pokedex.csproj",
       "projectName": "Pokedex",
-      "projectPath": "/home/michael/Projects-DotNet/Pokedex/src/Pokedex.csproj",
+      "projectPath": "/home/michael/Projects-DotNet/MrRobotES/src/Pokedex.csproj",
       "packagesPath": "/home/michael/.nuget/packages/",
-      "outputPath": "/home/michael/Projects-DotNet/Pokedex/src/obj/",
+      "outputPath": "/home/michael/Projects-DotNet/MrRobotES/src/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
