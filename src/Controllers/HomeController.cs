@@ -103,6 +103,8 @@ namespace Pokedex.Controllers
             var result = await _client.SearchAsync<Pokemon>(s => s
                 .Query(q => q.MatchAll())
                 .Size(200)
+                .Sort(ss => ss
+                    .Ascending(p => p.Id))
                 );
 
             IEnumerable<Pokemon> listOfPokemon = result.Documents;
