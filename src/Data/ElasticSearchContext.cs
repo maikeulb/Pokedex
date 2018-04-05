@@ -15,7 +15,7 @@ namespace Pokedex.Data
 
         public ElasticClient GetClient()
         {
-            node = new Uri("http://172.17.0.7:9200");
+            node = new Uri("http://172.17.0.6:9200");
             settings.DefaultIndex("pokemon_cleansed");
             var client = new ElasticClient(settings);
             return client;
