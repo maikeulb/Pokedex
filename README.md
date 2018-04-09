@@ -19,9 +19,7 @@ Run
 
 You need .NET Core 2.0 SDK and a local Elastisearch service to run the
 application. If you meeet those requirements, then  open
-`/Data/ElasticSearchContext.cs` and point the Elasticsearch URI to your client
-and run the following:
-
+`/Data/ElasticSearchContext.cs` and point the Elasticsearch URI to your client.
 ```
 dotnet restore
 dotnet run
